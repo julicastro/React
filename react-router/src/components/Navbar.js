@@ -2,9 +2,9 @@ import React from 'react';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 
 const Navbar = (props) => {
-    setTimeout ( () => {
+    /*setTimeout ( () => {
         props.history.push('./about') // redirecciona dsp de un tiempo
-    },2000)
+    },2000)*/
     return (
         <nav className='ui raised very padded segment'>
             <a className='ui teal inverted segment'>Gloria</a>
