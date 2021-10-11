@@ -12,7 +12,7 @@ import Header from "./src/components/Header";
 // create component
 const App = () => {
     return (
-        <Header />
+        <Header title={'Cars'}/>
     )
 };
 
