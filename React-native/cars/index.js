@@ -1,7 +1,9 @@
 // import libraries
 import React from "react";
-import { Text, AppRegistry } from "react-native"; 
+import { AppRegistry } from "react-native";
+
 import Header from "./src/components/Header";
+import CarList from "./src/components/CarList";
 
 /* 
  no importamos toda la libreria
@@ -12,7 +14,10 @@ import Header from "./src/components/Header";
 // create component
 const App = () => {
     return (
-        <Header title={'Cars'}/>
+        <View>
+            <Header title={'Cars'} />
+            <CarList />
+        </View>
     )
 };
 
