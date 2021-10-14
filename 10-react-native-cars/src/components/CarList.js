@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View } from "react-native";
+import { View, ScrollView } from "react-native";
 import axios from 'axiois';
 import CarDetail from "./CarDetail";
 
@@ -25,14 +25,12 @@ class CarList extends Component {
         })
     }
 
-
-
     render() {
-
+        console.log(this.state);
         return (
-            <View>
+            <ScrollView>
                 {this.renderList}
-            </View >
+            </ScrollView >
         );
     }
 }

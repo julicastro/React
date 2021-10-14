@@ -1,17 +1,34 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Image, Linking } from "react-native";
 
 import Item from "./Item";
 import ItemSection from "./ItemSection";
+import Button from "./Button";
 
-const CarDetail = (props) => {
+const CarDetail = ({ brand }) => {
+    const { headerContainer, headerText, imageStyle } = styles;
+
     return (
         <Item>
             <ItemSection>
-                <View style={styles.headerContainer}>
-                    <Text>{props.brand.brand}</Text>
-                    <Text>{props.brand.model[0].name}</Text>
+                <View style={headerContainer}>
+                    <Text style={headerText}>{brand.brand}</Text>
+                    <Text style={headerText}>{brand.model[0].name}</Text>
                 </View>
+            </ItemSection>
+            <ItemSection>
+                <Image
+                    source={{ uri: brand.model[0].image }}
+                    style={imageStyle}
+                />
+            </ItemSection>
+            <ItemSection>
+                <Button 
+                    buttonPress={ () => {
+                        Linking.openURL(brand.model[0].url);
+                    }}
+                
+                />
             </ItemSection>
         </Item>
     );
@@ -21,6 +38,16 @@ const styles = {
     headerContainer: {
         flexDirection: 'column',
         justifyContent: 'space-between'
+    },
+    headerText: {
+        fontSize: 18,
+        fontWeight: '500',
+        textTransform: 'uppercase'
+    },
+    imageStyle: {
+        height: 300,
+        flex: 1,
+        width: 0
     }
 }
 
