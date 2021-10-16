@@ -1,7 +1,7 @@
 # Mobile and Web Development with React and React Native
 Contiene toda la práctica realizada en el curso "Mobile and Web Development with React and React Native"
 
-Link: https://www.udemy.com/course/mobile-and-web-development-with-react-and-react-native/learn/lecture/23700484#overview
+Link: https://www.udemy.com/course/mobile-and-web-development-with-react-and-react-native/
 
 IDE: Visual Studio Code, Android Studio 
 
